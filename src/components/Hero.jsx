@@ -251,6 +251,10 @@ export default function Hero() {
           {/* Primary */}
           <Magnet padding={35} magnetStrength={3}>
             <button
+              onClick={() => {
+                const el = document.getElementById("projects");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
               className="group relative flex items-center gap-2.5 px-8 py-3.5 rounded-xl font-bold text-sm text-white overflow-hidden transition-all duration-300"
               style={{
                 background: "#B91C3C",
