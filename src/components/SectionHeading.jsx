@@ -66,7 +66,7 @@ export default function SectionHeading({
       )}
 
       {/* Title */}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-tight select-none">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight select-none">
         <SplitText
           text={title}
           delay={25}
@@ -97,7 +97,7 @@ export default function SectionHeading({
       {description && (
         <motion.p
           variants={descVariants}
-          className="text-sm md:text-base text-[#CBD5E1] max-w-2xl mt-5 leading-relaxed font-normal"
+          className="text-base lg:text-lg text-[#CBD5E1] max-w-2xl mt-5 leading-relaxed font-normal"
         >
           {description}
         </motion.p>

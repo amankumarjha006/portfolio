@@ -65,7 +65,8 @@ const focusAreas = [
 export default function Hero() {
   return (
     <section
-      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      id="hero"
+      className="relative w-full min-h-[90vh] lg:min-h-screen flex flex-col items-center justify-center overflow-hidden"
       style={{ backgroundColor: "#0a0b13" }}
     >
       {/* ── Galaxy Background ─────────────────────────────────────────────── */}
@@ -165,14 +166,13 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.3 }}
           >
             <h1
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-none"
               style={{
-                fontSize: "clamp(2.8rem, 7vw, 6rem)",
                 fontWeight: 900,
                 letterSpacing: "-0.02em",
                 lineHeight: 1.05,
                 color: "white",
               }}
-              className="font-black leading-none"
             >
               <SplitText
                 text="Aman Kumar Jha"
@@ -189,8 +189,8 @@ export default function Hero() {
         </div>
 
         {/* 3 ─ Subtitle */}
-        <motion.div {...fadeUp(0.65)} className="pointer-events-auto mb-11 max-w-[750px]">
-          <p className="text-xl sm:text-2xl leading-relaxed font-normal" style={{ color: "#94A3B8" }}>
+        <motion.div {...fadeUp(0.65)} className="pointer-events-auto mb-11 max-w-[750px] px-4">
+          <p className="text-base lg:text-lg leading-relaxed font-normal" style={{ color: "#94A3B8" }}>
             Focused on{" "}
             <span
               className="font-semibold transition-colors duration-200"

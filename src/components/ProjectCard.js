@@ -222,7 +222,7 @@ export default function ProjectCard({ project, onClick, index = 0 }) {
                               delay={0.2 + i * 0.1}
                               className="text-base font-bold text-[#F8FAFC]"
                             />
-                            <span className="text-[#F59E0B]">{parsed.suffix}</span>
+                            <span className="text-[#E11D48]">{parsed.suffix}</span>
                           </span>
                         ) : (
                           <span className="text-[11px] font-bold text-[#F8FAFC] leading-tight">

@@ -45,6 +45,7 @@ export default function TiltedCard({
 
   function handleMouse(e) {
     if (!ref.current) return;
+    if (typeof window !== 'undefined' && window.matchMedia('(any-pointer: coarse)').matches) return;
 
     const rect = ref.current.getBoundingClientRect();
     const offsetX = e.clientX - rect.left - rect.width / 2;
@@ -65,6 +66,7 @@ export default function TiltedCard({
   }
 
   function handleMouseEnter() {
+    if (typeof window !== 'undefined' && window.matchMedia('(any-pointer: coarse)').matches) return;
     scale.set(scaleOnHover);
     opacity.set(1);
   }

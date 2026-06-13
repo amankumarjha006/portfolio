@@ -13,6 +13,8 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import OrbitalSkills from "@/components/OrbitalSkills";
 import ClickSpark from "@/components/ClickSpark/ClickSpark";
+import FloatingNav from "@/components/FloatingNav";
+import { socials } from "@/data/socials";
 
 // ─── Inline SVG Icons ────────────────────────────────────────────────────────
 const Github = (props) => (
@@ -92,6 +94,7 @@ export default function Home() {
       <div className="relative min-h-screen bg-[#0a0b13] text-[#F8FAFC] flex flex-col font-sans selection:bg-[#B91C3C]/30 selection:text-white">
       {/* ── Fixed noise overlay ── */}
       <div className="noise-overlay" />
+      <FloatingNav />
 
       {/* ── Galaxy background in hero only ── */}
       <Hero />
@@ -143,7 +146,7 @@ export default function Home() {
         <AmbientParticles />
 
         {/* ── Projects Grid Showcase ── */}
-        <section id="projects" className="max-w-[1200px] mx-auto px-6 py-16 md:py-24 relative z-10" aria-label="Featured projects showcase">
+        <section id="projects" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24 xl:py-32 relative z-10" aria-label="Featured projects showcase">
           <SectionHeading
             label="Featured Work"
             title="Projects"
@@ -188,14 +191,17 @@ export default function Home() {
 
       {/* ── Footer Section ── */}
       <footer className="border-t border-[#233044] bg-[#0a0b13]/90 py-12 text-center text-[#94A3B8] text-sm z-10 select-none relative">
-        <div className="max-w-[1200px] mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>&copy; {new Date().getFullYear()} Aman Kumar Jha. All rights reserved.</p>
           <div className="flex gap-6 text-[#CBD5E1]">
-            <a href="https://github.com/amankumarjha006" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:text-rose-500 transition-colors duration-200">GitHub</a>
-            <span className="text-[#233044]">|</span>
-            <a href="https://cine-sync-hvnp.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:text-rose-500 transition-colors duration-200">CineSync</a>
-            <span className="text-[#233044]">|</span>
-            <a href="https://ainotes-navy.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:text-rose-500 transition-colors duration-200">AI Notes</a>
+            <a href={socials.find(s => s.platform === "GitHub")?.href || "https://github.com/amankumarjha006"} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#B91C3C] transition-colors duration-200">
+              <Github className="w-4 h-4" />
+              <span>GitHub</span>
+            </a>
+            <a href={socials.find(s => s.platform === "LinkedIn")?.href || "https://www.linkedin.com/in/aman-kumar-jha-615274323"} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#B91C3C] transition-colors duration-200">
+              <Linkedin className="w-4 h-4" />
+              <span>LinkedIn</span>
+            </a>
           </div>
         </div>
       </footer>

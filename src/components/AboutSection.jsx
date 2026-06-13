@@ -59,7 +59,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="max-w-[1200px] mx-auto px-6 py-16 md:py-24 relative z-10" aria-label="About Aman Kumar Jha">
+    <section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24 xl:py-32 relative z-10" aria-label="About Aman Kumar Jha">
       <SectionHeading
         label="MY JOURNEY"
         title="About Me"

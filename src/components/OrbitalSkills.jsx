@@ -144,7 +144,7 @@ export default function OrbitalSkills() {
         className="max-w-[1200px] w-full px-6 z-30"
       />
 
-      <div className="relative w-full max-w-[800px] h-[500px] md:h-[700px] mt-10 md:mt-20 mx-auto flex items-center justify-center orbit-system scale-[0.6] sm:scale-75 md:scale-100">
+      <div className="relative w-full max-w-[800px] h-[400px] sm:h-[500px] md:h-[700px] mt-10 md:mt-20 mx-auto flex items-center justify-center orbit-system scale-[0.4] min-[400px]:scale-[0.5] sm:scale-75 md:scale-100">
         
         {/* Deep space ambient elements */}
         <div className="absolute inset-0 z-0">
